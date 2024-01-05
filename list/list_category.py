@@ -1,5 +1,6 @@
 from data.mysql_connector import DbConnection
 from model.category import Category
+from utils.format_export_string import FormatExportString
 
 class ListCategory: 
   __list_cate = [] 
@@ -31,17 +32,6 @@ class ListCategory:
     return list_cate
   
   def __str__(self) -> str:
-    item_count = len(self.__list_cate)
-    if(item_count == 0):
-      return 'ListCate[]'
-    result = 'ListCate [\n'
-    count = 0
-    for item in self.__list_cate:
-      count += 1
-      if(count == len(self.__list_cate)):
-        result += f'\t{item} \n'
-        result += ']'
-      else:
-        result += f'\t{item}, \n'
+    result = FormatExportString.execute('ListCategory', self.__list_cate)
 
     return result

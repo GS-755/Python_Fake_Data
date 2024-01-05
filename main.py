@@ -4,7 +4,7 @@ from query_database import *
 
 def init_console() -> None:
   os.system('cls')
-  print(platform.processor())
+  print(f'Generic CPU name: {platform.processor()}')
   print(f'Number of CPU threads: {cpu_count()}')
   print()
 if(__name__ == '__main__'):
