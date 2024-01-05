@@ -80,6 +80,7 @@ class ListProduct:
     self.__db_cursor.execute(query)
     self.__db_cursor.close()
     self.__db_cnx.close_connection()
+    self.__db_cnx.commit_change()
     print('Wiped the products table successfully!')
   
   def insert_pending(self, item) -> None:

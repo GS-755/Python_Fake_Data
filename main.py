@@ -1,10 +1,7 @@
 import os, platform
-from tqdm import tqdm
 from multiprocessing import cpu_count
 from query_database import *
 from utils.mock_product_data import MockProductData
-from model.product import Product
-
 from query_database import *
 
 def init_console() -> None:
@@ -23,4 +20,4 @@ def make_publish_random_data(size) -> None:
 
 if(__name__ == '__main__'):
   init_console()
-  make_publish_random_data(1000)
+  make_publish_random_data(100000)

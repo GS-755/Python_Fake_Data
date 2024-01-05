@@ -1,4 +1,4 @@
-DROP DATABASE testdatabase;
+DROP DATABASE testmockdata;
 CREATE DATABASE testmockdata CHARACTER SET utf8 COLLATE utf8_general_ci;
 USE testmockdata; 
 CREATE TABLE Category (
@@ -27,3 +27,4 @@ SELECT *
 FROM Category;
 SELECT *
 FROM Products;
+DELETE FROM Products;
