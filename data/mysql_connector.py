@@ -25,3 +25,5 @@ class DbConnection:
     return self.__cursor
   def close_connection(self) -> None: 
     self.__db_connection.close()
+  def commit_change(self) -> None: 
+    self.__db_connection.commit()
