@@ -21,6 +21,18 @@ class Product:
     return self.__pro_desc
   def get_id_cate(self) -> int: 
     return self.__id_cate
+  def set_id_pro(self, id_pro) -> None: 
+    self.__id_pro = id_pro
+  def set_name_pro(self, name_pro) -> None: 
+    self.__name_pro = name_pro
+  def set_qty_pro(self, qty_pro) -> None: 
+    self.__qty = qty_pro
+  def set_price_pro(self, price_pro) -> None: 
+    self.__price = price_pro
+  def set_desc_pro(self, desc_pro) -> None: 
+    self.__pro_desc = desc_pro
+  def set_id_cate(self, id_cate) -> None: 
+    self.__id_cate = id_cate
   
   def __str__(self) -> str:
     return f'''Product[

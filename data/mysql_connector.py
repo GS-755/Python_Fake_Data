@@ -23,3 +23,5 @@ class DbConnection:
     return self.__db_connection
   def get_cursor(self): 
     return self.__cursor
+  def close_connection(self) -> None: 
+    self.__db_connection.close()
