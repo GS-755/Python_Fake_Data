@@ -1,0 +1,14 @@
+# Python venv folder
+venv/
+# Build & distribution 
+build/
+dist/
+# dotenv file
+.env 
+.env.*
+!.env.example
+.env.local*
+# Test folder
+test/
+# Python cache 
+__pycache__/

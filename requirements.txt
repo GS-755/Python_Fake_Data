@@ -1,0 +1,7 @@
+pyinstaller
+pandas
+tqdm
+faker
+mysql-connector-python
+python-dotenv
+faker-commerce
