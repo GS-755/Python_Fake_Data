@@ -22,7 +22,7 @@ class tt_nguoi_dung:
         return str(f'0{random_data}')
 
     def random_dob(self) -> datetime:
-        birth_year = random.randint(1800, 2010)
+        birth_year = random.randint(1954, 1998)
         birth_date = datetime(birth_year, 1, 1) + timedelta(days=random.randint(0, 365))
 
         return birth_date
@@ -45,6 +45,8 @@ class tt_nguoi_dung:
         return str(selection)
 
     def export_insert_clause(self) -> str:
+        formatedDateTime = self.ngay_sinh.strftime("%Y-%b-%d %H:%M:%S")
+
         return str(
-            f"""INSERT INTO tt_nguoi_dung VALUES ('{self.cccd}', '{self.ho_lot}', '{self.ten}', {self.ngay_sinh}, '{self.gioi_tinh}', '{self.so_dt}', '{self.email}', '{self.dia_chi}');"""
+            f"""INSERT INTO tt_nguoi_dung VALUES ('{self.cccd}', '{self.ho_lot}', '{self.ten}', TO_TIMESTAMP(\'{formatedDateTime}\', \'YYYY-MON-DD HH24:MI:SS\'), '{self.gioi_tinh}', '{self.so_dt}', '{self.email}', '{self.dia_chi}');"""
         )

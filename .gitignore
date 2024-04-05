@@ -6,9 +6,12 @@ dist/
 # dotenv file
 .env 
 .env.*
-!.env.example
 .env.local*
+!.env.example
 # Test folder
 test/
 # Python cache 
 __pycache__/
+# log 
+*.sql
+!example.sql
